@@ -19,7 +19,7 @@ jobs:
           name: Run tests
           command: python -m pytest
   build:
-    working_directory: ~/vue-testfriend
+    working_directory: ~/vue-testfriend/vue-testfriend
     docker:
       - image: circleci/node:8
     steps:
