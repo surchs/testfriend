@@ -6,6 +6,7 @@ workflows:
   sample:
     jobs:
       - build-and-test
+      - build
 jobs:
   build-and-test:
     docker:
