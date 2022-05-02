@@ -6,7 +6,7 @@ workflows:
   sample:
     jobs:
       - build-and-test
-      - build
+      - jest-test
 jobs:
   build-and-test:
     docker:
@@ -18,14 +18,14 @@ jobs:
       - run:
           name: Run tests
           command: python -m pytest
-  build:
+  jest-test:
     docker:
       - image: cimg/node:18.0.0
     steps:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm ci --prefix ./vue-testfriend
+          command: npm ci --prefix /home/circleci/project/vue-testfriend
       - run:
           name: Run Tests
           command: npm test
