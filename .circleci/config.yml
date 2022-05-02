@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm ci --prefix /home/circleci/project/vue-testfriend
+          command: npm --prefix /home/circleci/project/vue-testfriend/ ci
       - run:
           name: Run Tests
           command: npm test
